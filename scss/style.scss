@@ -1,0 +1,96 @@
+$padding: 6px;
+$white_bg: #e6e9ec;
+$primary_color: #263c5b;
+$primary_select: #395f94;
+$primary_selected: #4c81ca;
+
+html,body { 
+  margin:0;
+  height:100%; 
+  background: $primary_color;
+}
+
+#title {
+  color:#fff;
+  text-align: center;
+}
+nav {
+  ul {
+    margin: 0;
+    padding: $padding;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: $padding 12px;
+    text-decoration: none;
+  }
+}
+
+.container-fluid{
+  display:table;
+  height: 100%;
+  width: 100%;
+}
+
+#search_container{
+  display: table-row;
+  position: relative;
+  margin-bottom: 5px;
+  width:100%;
+
+  .input-group {
+    border-spacing: 0px 9px;
+  }
+}
+
+#content_container {
+  display: table-row;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .content_panel {
+    display:inline-block;
+    background: $white_bg;
+    height:98%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    padding: 0px;
+    white-space: nowrap; 
+  }
+  .content_wiki{
+      height: 100%;
+      width: 100%;
+  }
+}
+
+#lang_menu_container {
+  position:absolute;
+}
+
+#lang_menu {
+  table {
+    border: 1px solid black;
+  }
+  tbody{
+    position: absolute;
+    background: $white_bg;
+    border-color: #000;
+    margin: 0 auto;
+    z-index: 999;
+    td {
+      margin-left: 5px;
+      padding: $padding;
+    }
+    td:hover {
+        background-color: $primary_select
+    }
+    .selected {
+        background-color: $primary_selected;
+    }
+  }
+}
+
