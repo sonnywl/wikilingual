@@ -10,6 +10,32 @@ html,body {
   background: $primary_color;
 }
 
+header {
+  margin: 0.8em;
+  h3{
+    margin:0;
+    padding: 0;
+  }
+  span {
+    display:block;
+    float: right;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    margin: 5px auto;
+  }
+}
+p {
+  color:#fff;
+}
+
+a {
+  color:#ffd498;
+  &:hover {
+    color: #f8a024;
+  }
+}
+
 #title {
   color:#fff;
   text-align: center;

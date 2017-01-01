@@ -5,18 +5,38 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Multilingual search for Wikipedia">
+    <meta name="description" content="multi-language search">
+    <meta name="keywords" content="lingual, search, wikipedia, edits, multi-language">
+    <meta name="author" content="Sonny Lin">
     <title>
         Wikilingual
     </title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-89624978-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
 
 <body>
     <div class="container-fluid">
         <div id="search_container">
-            <h3 id="title">Wikilingual</h3>
+            <header>
+                <span>
+                    <a href="https://github.com/sonnywl/wikilingual/">About</a>
+                </span>
+                <h3 id="title">Wikilingual</h3>
+            </header>
             <div class="input-group">
                 <input id="input_search" class="form-control search" placeholder="Search..." type="text"></input>
                 <div id="input_search_group" class="input-group-btn">
@@ -37,7 +57,10 @@
         </div>
         <div id="content_container">
         </div>
-
+        <footer>
+            <p class="small">This site uses <a href="http://www.google.com/analytics/">google analytics</a> to find out how many people visit
+                it and some related information. You can <a href="https://tools.google.com/dlpage/gaoptout">opt out of google analytics</a>                orby installing a browser add-on.</p>
+        </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
