@@ -91,6 +91,13 @@ nav {
       height: 100%;
       width: 100%;
   }
+
+  h2{
+    display: flex; 
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    height:70%;
+  }
 }
 
 #lang_menu_container {
