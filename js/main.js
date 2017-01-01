@@ -81,7 +81,8 @@ function onQueryCompleted(data) {
 
 function addLanguage(languageId, languageName) {
     languageIds.push(languageId);
-    $("#content_container").append("<div id='" + languageId + "' class='content_panel panel-body'></div>");
+    $("#content_container").append("<div id='" + languageId + "' class='content_panel panel-body'><h2>"
+        + languages[languageId].eng + "<br>" + languages[languageId].local+ "</h2></div>");
     updateContentFrames();
 }
 
@@ -116,7 +117,7 @@ function createTable(mainLocale) {
     var builder = "<tr>";
     if (languages[mainLocale] !== undefined) {
         cnt += 1;
-        builder += "<td id='" + mainLocale + "'><span>" + languages[mainLocale]['eng'] + "</span></td>";
+        builder += "<td id='" + mainLocale + "'><span>" + languages[mainLocale].eng + "</span></td>";
         // delete languagues[mainLocale];
     }
     var sorted = Object.keys(languages);
@@ -129,7 +130,7 @@ function createTable(mainLocale) {
             if (cnt === 0) {
                 builder += "<tr>";
             }
-            builder += "<td id='" + sorted[langKey] + "'><span>" + lang['eng'] + "</span></td>";
+            builder += "<td id='" + sorted[langKey] + "'><span>" + lang.eng + "</span></td>";
             if (cnt > 4) {
                 builder += "</tr>";
             }
