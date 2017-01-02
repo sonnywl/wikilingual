@@ -41,7 +41,7 @@ function getWikiLinks(languages, wikiData, query) {
 function getWikiData(languages, query, callback) {
     var region_query = languages.join("|");
     var request_url = 'https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&titles=' + query +
-        "&sites="+languages[0]+"wiki&languages=" + region_query + "&callback=?";
+        "&sites=" + languages[0] + "wiki&languages=" + region_query + "&callback=?";
     $.getJSON(request_url, callback);
 }
 
