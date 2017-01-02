@@ -50,22 +50,10 @@ var query;
 function submitQuery() {
     query = $("#input_search").val();
     console.log("Query submitted " + query);
-    getWikiData(languageIds, query, onQueryCompleted);
-    $.ajax({
-        url: "./query",
-        type: "POST",
-        dataType: "json",
-        contentType: "application/json, charset=utf-8",
-        data: JSON.stringify({
-            "query": query,
-            "regions": languageIds
-        }),
-        success: function (data, textStatus, xhr) {
-        }
-    });
+    getWikiData(languageIds, query, onWikiDataCompleted);
 }
 
-function onQueryCompleted(data) {
+function onWikiDataCompleted(data) {
     var results = onWikiDataReceived(data, languageIds);
     var wiki_links = getWikiLinks(languageIds, results, query);
     console.log(wiki_links);
@@ -75,9 +63,10 @@ function onQueryCompleted(data) {
         var langContent = $("#content_container").find("#" + language);
         langContent.empty();
         langContent.append("<iframe class='content_wiki' src=" +
-            wiki_links[language].wiki_link + "&printable=yes></iframe>");
+            wiki_links[language].wiki_link + "></iframe>");
     }
 }
+
 
 function addLanguage(languageId, languageName) {
     languageIds.push(languageId);
