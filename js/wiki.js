@@ -26,11 +26,11 @@ function getWikiLinks(languages, wikiData, query) {
             var lang = languages[pos];
             if (wikiData[lang].title !== undefined) {
                 wikiLinks[lang] = {
-                    "wiki_link": getWikiArticleLink(lang, wikiData[lang].title)
+                    "wiki_link": getWikiArticleMobileLink(lang, wikiData[lang].title)
                 };
             } else {
                 wikiLinks[lang] = {
-                    "wiki_link": getWikiArticleLink(lang, query)
+                    "wiki_link": getWikiArticleMobileLink(lang, query)
                 };
             }
         }
@@ -47,6 +47,10 @@ function getWikiData(languages, query, callback) {
 
 function getWikiArticleLink(region, query) {
     return "https://" + region + ".wikipedia.org/w/index.php?title=" + query;
+}
+
+function getWikiArticleMobileLink(region, query) {
+    return "https://" + region + ".m.wikipedia.org/w/index.php?title=" + query;
 }
 
 function getWikiSearchLink(region, query) {
