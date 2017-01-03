@@ -70,8 +70,8 @@ function onWikiDataCompleted(data) {
 
 function addLanguage(languageId, languageName) {
     languageIds.push(languageId);
-    $("#content_container").append("<div id='" + languageId + "' class='content_panel panel-body'><h2>"
-        + languages[languageId].eng + "<br>" + languages[languageId].local+ "</h2></div>");
+    $("#content_container").append("<div id='" + languageId + "' class='content_panel panel-body'><h2>" +
+        languages[languageId].eng + "<br>" + languages[languageId].local + "</h2></div>");
     updateContentFrames();
 }
 
@@ -93,8 +93,10 @@ function updateContentFrames() {
 
     languageIds.forEach(function (id) {
         contentContainer.find("#" + id).css({
-            display: "inline-block",
-            width: maxWidth + "%"
+            "display": "inline-block",
+            "width": "1px !important",
+            "*width": maxWidth + "%",
+            "min-width": maxWidth + "%"
         });
     });
 }
